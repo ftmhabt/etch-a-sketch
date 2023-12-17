@@ -4,19 +4,35 @@
     padding: 0;
 }
 
+body{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+button{
+    margin: 36px;
+    padding: 8px 24px;
+    background-color: blueviolet;
+    color: aliceblue;
+    border-radius: 16px;
+}
+
 .container{
     display: flex;
     flex-direction: column;
+    width: 70vh;
+    height: 70vh;
+    margin: 0 auto;
 }
 
 .grid-row{
     display: flex;
+    flex-grow: 1;
 }
 
 .grid-item{
-    width: 6.2vw;
-    height: 6.2vw;
-
     background-color: cornflowerblue;
+    flex-grow: 1;
 }
 

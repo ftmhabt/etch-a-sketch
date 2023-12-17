@@ -1,26 +1,46 @@
 let body=document.querySelector('body');
-let container=document.createElement('div');
-container.classList.add('container');
+const btn=document.querySelector('#btn');
+let container;
 
-body.appendChild(container);
+MakeGrid(16);
 
-for (let i = 0; i < 16; i++) {
+btn.addEventListener('click',()=>{
+    gridsize=prompt();
+    MakeGrid(gridsize);
+})
 
-    let gridRow=document.createElement('div');
-    gridRow.classList.add('grid-row');
+function MakeGrid(gridsize=16){
+
+    
+    if(container!==undefined){
+        container.remove();
+    }
+        container=document.createElement('div');
+        container.classList.add('container');
+
+        body.appendChild(container);
+
+        for (let i = 0; i < gridsize; i++) {
+
+            let gridRow=document.createElement('div');
+            gridRow.classList.add('grid-row');
     
 
-    for (let j = 0; j < 16; j++) {
-        let div=document.createElement('div');
-        div.classList.add('grid-item');
+            for (let j = 0; j < gridsize; j++) {
+                let div=document.createElement('div');
+                div.classList.add('grid-item');
 
-        div.addEventListener('mouseover',()=>{
-            div.setAttribute('style','background-color:blue;');
-        })
-        gridRow.appendChild(div);
-    }
+                div.addEventListener('mouseover',()=>{
+                div.setAttribute('style','background-color:blue;');
+                })
+            gridRow.appendChild(div);
+            }
 
-    container.appendChild(gridRow);
+            container.appendChild(gridRow);
+        }
+    
+    
+
 
 }
 
