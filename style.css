@@ -1,0 +1,21 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+.grid-row{
+    display: flex;
+}
+
+.grid-item{
+    background-color: cornflowerblue;
+    width: 6.2vw;
+    height: 6.2vw;
+    border: 1px white solid;
+}
