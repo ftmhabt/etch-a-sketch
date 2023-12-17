@@ -14,9 +14,13 @@ for (let i = 0; i < 16; i++) {
         let div=document.createElement('div');
         div.classList.add('grid-item');
 
+        div.addEventListener('mouseover',()=>{
+            div.setAttribute('style','background-color:blue;');
+        })
         gridRow.appendChild(div);
     }
 
     container.appendChild(gridRow);
 
 }
+
