@@ -14,8 +14,10 @@
 }
 
 .grid-item{
-    background-color: cornflowerblue;
     width: 6.2vw;
     height: 6.2vw;
-    border: 1px white solid;
+}
+
+.grid-item:hover{
+    background-color: cornflowerblue;
 }
